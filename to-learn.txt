@@ -1,8 +1,8 @@
-how to paste/copy from/to other applications?
+# make it so copy and paste takes stuff from clipboard ("+y)
+# select (insert into the first space in each line)
+# move lines up/down
+# setup autocomplete
 
-C#
 
-go to usages of a class/interface
-go implementation of an interface
-go to a class/method
-rename a variable in all the places. Without by accident renaming other variable named the same in different method/class) - AKA: detect variable's scope and rename it.
+Maybe watch https://www.youtube.com/watch?v=m8C0Cq9Uv9o
+Save somewhere: https://blog.nikfp.com/i-moved-to-neovim-and-love-it-but-is-it-right-for-you
