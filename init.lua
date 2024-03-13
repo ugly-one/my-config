@@ -9,6 +9,9 @@ vim.call('plug#begin')
 Plug('OmniSharp/omnisharp-vim')
 Plug('tpope/vim-surround')
 Plug('prabirshrestha/asyncomplete.vim')
+Plug('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' })
+Plug('ibhagwan/fzf-lua')
+Plug('dense-analysis/ale')
 vim.call('plug#end')
 
 vim.keymap.set('n', '<C-o><C-d>', '<cmd> OmniSharpGotoDefinition<CR>')
@@ -31,3 +34,5 @@ vim.keymap.set('i', '<CR>', function()
     return vim.fn.pumvisible() == 1 and vim.fn['asyncomplete#close_popup']() or '<CR>'
 end, {expr = true})
 
+vim.keymap.set('n', '<C-t>', '<cmd>:FzfLua files<CR>')
+vim.keymap.set('n', '<C-g>', '<cmd>:FzfLua git_status<CR>')
