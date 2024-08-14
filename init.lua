@@ -10,7 +10,7 @@ vim.o.tabstop = 4 -- adding only this setting doesn't make the tab to stop after
 vim.o.shiftwidth = 4 -- what does it do? added it because tabstop doesn't work
 vim.o.softtabstop = 4 -- what does it do? added it because tabstop doesn't work
 vim.opt.clipboard = 'unnamedplus' -- copy to system's clipboard
-vim.g.nvim_tree_respect_buf_cwd=1 -- open tree window at the location of current buffer
+--vim.g.nvim_tree_respect_buf_cwd=1 -- open tree window at the location of current buffer
 vim.g.netrw_keepdir=0 -- something that doesn't allow me to copy files ?!
 vim.g.OmniSharp_server_use_net6 = 1 -- I think this one has to be setup before something. Perhaps before we install the server. 
 -- so maybe it's OK to have it after all plugins are installed
@@ -20,18 +20,18 @@ vim.call('plug#begin')
 Plug('OmniSharp/omnisharp-vim') -- basic C# support
 Plug('prabirshrestha/asyncomplete.vim') -- not sure why I have this one. Why omnisharp-vim is not enough?
 -- having issues with fzf - not able to find files - I get an infinite spinner
---Plug('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' }) -- required by fzf-lua
---Plug('ibhagwan/fzf-lua') -- finding files (and probably more!)
+Plug('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' }) -- required by fzf-lua
+Plug('ibhagwan/fzf-lua') -- finding files (and probably more!)
 -- using telescope for now
-Plug('nvim-lua/plenary.nvim')
-Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
+--Plug('nvim-lua/plenary.nvim')
+--Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 Plug('dense-analysis/ale') -- for showing errors
 Plug('tpope/vim-fugitive') -- testing if doing git stuff from nvim brings any benefits. So far it's useful to do Git blame
 Plug('catppuccin/nvim',{ ['as'] = 'catppucin' }) -- theme
 vim.call('plug#end')
+vim.g.ale_linters = { ['cs'] = 'OmniSharp' }
 
 vim.cmd.colorscheme "catppuccin"
-
 vim.keymap.set('n', '<Leader>d',        '<cmd> OmniSharpGotoDefinition<CR>')
 vim.keymap.set('n', '<Leader>i',        '<cmd> OmniSharpFindImplementations<CR>')
 vim.keymap.set('n', '<Leader>u',        '<cmd> OmniSharpFindUsages<CR>')
@@ -67,12 +67,13 @@ vim.g.OmniSharp_loglevel = 'error'
 --    return vim.fn.pumvisible() == 1 and vim.fn['asyncomplete#close_popup']() or '<CR>'
 --end, {expr = true})
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>t', builtin.find_files, {})
-vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<Leader>js', '<cmd>:%!jq .<CR>')
-
+--local builtin = require('telescope.builtin')
+--vim.keymap.set('n', '<leader>t', builtin.find_files, {})
+--vim.keymap.set('n', '<leader>g', builtin.live_grep, {})
+--vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+--vim.keymap.set('n', '<Leader>js', '<cmd>:%!jq .<CR>')
+vim.keymap.set("n", "<Leader>t", require('fzf-lua').files, { desc = "Fzf Files" })
+vim.keymap.set("n", "<Leader>f", require('fzf-lua').live_grep, { desc = "Fzf Live Grep" })
 -- opening and closing quickfix list
 vim.keymap.set('n', '<Leader>q', '<cmd>:copen<CR>')
 vim.keymap.set('n', '<Leader>Q', '<cmd>:cclose<CR>')

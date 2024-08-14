@@ -1,0 +1,2 @@
+require("tgn")
+print("hello")
