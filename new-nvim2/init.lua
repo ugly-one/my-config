@@ -1,2 +1,1 @@
 require("tgn")
-print("hello")
