@@ -35,3 +35,4 @@ vim.keymap.set('n', '<leader><up>', '<C-w>k')
 vim.keymap.set('n', '<leader><down>', '<C-w>j')
 -- save files only if something was modified
 vim.keymap.set('n', '<leader>w', '<cmd>:up<cr>')
+
