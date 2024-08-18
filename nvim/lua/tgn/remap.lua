@@ -28,3 +28,10 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- open/close quick action buffer
 vim.keymap.set('n', '<Leader>q', '<cmd>:copen<CR>')
 vim.keymap.set('n', '<Leader>Q', '<cmd>:cclose<CR>')
+-- use arrows to navigate between windows
+vim.keymap.set('n', '<leader><left>', '<C-w>h')
+vim.keymap.set('n', '<leader><right>', '<C-w>l')
+vim.keymap.set('n', '<leader><up>', '<C-w>k')
+vim.keymap.set('n', '<leader><down>', '<C-w>j')
+-- save files only if something was modified
+vim.keymap.set('n', '<leader>w', '<cmd>:up<cr>')
