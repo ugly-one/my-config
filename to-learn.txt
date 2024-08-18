@@ -1,10 +1,2 @@
-# make it so copy and paste takes stuff from clipboard ("+y)
-# play with autocomplete - it's kind of broken if I combine it with "SignatureHelp" from omnisharp.
-# What about ALE - is this a plugin that can give me some nice C# features? Looks like it's an LSP client - is it a similar thing to omnisharp?
-# investigate if fzf has good-enough support for doing git-stuff from it. If not, is there a nice plugin for it, or can I just write few keymaps?
-
-Looks like there is a bigger theme here: see if omnisharp, fzf and lua are enough to do C#. 
-Looks like those plugins are very powerful. Before installing a new one, I should investigate their functionality first I think.
-
 Maybe watch https://www.youtube.com/watch?v=m8C0Cq9Uv9o
 Save somewhere: https://blog.nikfp.com/i-moved-to-neovim-and-love-it-but-is-it-right-for-you
