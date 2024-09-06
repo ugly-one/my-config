@@ -4,6 +4,7 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.scrolloff = 8 -- to leave some margin at the bottom/top when scrolling so the current line is never at the very top or end.
 
+vim.o.expandtab = true
 vim.o.tabstop = 4 -- adding only this setting doesn't make the tab to stop after 4 spaces. Had to add the 2 below.
 vim.o.shiftwidth = 4 -- what does it do? added it because tabstop doesn't work
 vim.o.softtabstop = 4 -- what does it do? added it because tabstop doesn't work

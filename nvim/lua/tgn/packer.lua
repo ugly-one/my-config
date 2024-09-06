@@ -5,25 +5,27 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	--use {
-	--        'nvim-telescope/telescope.nvim', tag = '0.1.8',
-	--        -- or                            , branch = '0.1.x',
-	--        requires = { {'nvim-lua/plenary.nvim'} }
-	--}
-	--
 	use { "ibhagwan/fzf-lua",
 		-- optional for icon support
 		requires = { "nvim-tree/nvim-web-devicons" }
-		-- or if using mini.icons/mini.nvim
-		-- requires = { "echasnovski/mini.icons" }
 	}
-	use {
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	}
+    --use {
+    --    "folke/tokyonight.nvim",
+    --    lazy = false,
+    --    priority = 1000,
+    --    opts = {
+    --        transparent = true,
+    --    },
+    --}
+	--use {
+	--	"rose-pine/neovim",
+	--	as = "rose-pine",
+	--	config = function()
+	--		vim.cmd('colorscheme rose-pine')
+	--	end
+	--}
+
+    use('kdheepak/lazygit.nvim')
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use('nvim-treesitter/playground')
