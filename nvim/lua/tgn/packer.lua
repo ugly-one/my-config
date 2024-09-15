@@ -9,14 +9,14 @@ return require('packer').startup(function(use)
 		-- optional for icon support
 		requires = { "nvim-tree/nvim-web-devicons" }
 	}
-    --use {
-    --    "folke/tokyonight.nvim",
-    --    lazy = false,
-    --    priority = 1000,
-    --    opts = {
-    --        transparent = true,
-    --    },
-    --}
+    use {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {
+            transparent = true,
+        },
+    }
 	--use {
 	--	"rose-pine/neovim",
 	--	as = "rose-pine",
@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
 	--	end
 	--}
 
+    use('stevearc/oil.nvim')
     use('kdheepak/lazygit.nvim')
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
