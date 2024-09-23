@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+	use('wbthomason/packer.nvim')
 
 	use { "ibhagwan/fzf-lua",
 		-- optional for icon support
@@ -43,5 +43,5 @@ return require('packer').startup(function(use)
 	use('hrsh7th/nvim-cmp');
 	use('williamboman/mason.nvim')
 	use('williamboman/mason-lspconfig.nvim')
-	use { "ray-x/lsp_signature.nvim" }
+	use("ray-x/lsp_signature.nvim")
 end)

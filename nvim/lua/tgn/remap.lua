@@ -10,7 +10,7 @@ vim.o.shiftwidth = 4 -- what does it do? added it because tabstop doesn't work
 vim.o.softtabstop = 4 -- what does it do? added it because tabstop doesn't work
 
 -- open explorer
-vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
+vim.keymap.set("n", "<C-e>", "<cmd>:Oil<CR>")
 vim.keymap.set("n", "<Leader>js", "<cmd>:%!jq .<CR>")
 -- keep the curson in the middle when going up and down a page
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
